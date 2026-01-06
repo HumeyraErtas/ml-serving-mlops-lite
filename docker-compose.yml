@@ -1,0 +1,13 @@
+services:
+  ml-serving:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=local
+      - ENABLE_DOCS=true
+      - LOG_LEVEL=INFO
+      - MODEL_DIR=models
+      - MODEL_VERSION=1.0.0
+    volumes:
+      - ./models:/app/models

@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# model artifacts
+models/*/model.joblib
+
+# test/cache
+.pytest_cache/
+.ruff_cache/
